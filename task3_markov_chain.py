@@ -1,0 +1,70 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPww9WsfPD+b6Vx+cKj2Hr+",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Manushree-2005/prodigy-infotech-tasks/blob/main/task3_markov_chain.py\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "YLF4z9sgnAHN"
+      },
+      "outputs": [],
+      "source": [
+        "!pip install markovify"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import markovify\n",
+        "\n",
+        "text = \"\"\"\n",
+        "Artificial intelligence is transforming industries across the world.\n",
+        "Machine learning allows computers to learn patterns from data.\n",
+        "Deep learning models can analyze complex information.\n",
+        "Natural language processing helps machines understand human language.\n",
+        "AI is widely used in healthcare, finance, and automation.\n",
+        "Generative AI systems can create text, images, and music.\n",
+        "Data science combines statistics, programming, and machine learning.\n",
+        "Artificial intelligence will continue to shape the future of technology.\n",
+        "AI models are improving search engines and recommendation systems.\n",
+        "Robotics and AI are working together in modern manufacturing.\n",
+        "\"\"\"\n",
+        "\n",
+        "model = markovify.Text(text, state_size=1)\n",
+        "\n",
+        "for i in range(5):\n",
+        "    print(model.make_sentence())"
+      ],
+      "metadata": {
+        "id": "lkQO4ZbtnLa0"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
